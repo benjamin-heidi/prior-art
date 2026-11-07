@@ -31,14 +31,19 @@ The pick rests on `code` and `docs` claims.
 
 ## Measured cost
 
-Tested on two real engineering questions (encrypting SQLite in a Rust desktop app, and pruning tool results in a long-running LLM agent):
+Tested on three real engineering questions: encrypting SQLite in a Rust desktop app, pruning tool results in a long-running LLM agent, and client-side rate limiting of LLM calls across async workers.
 
 | Run | Web calls | `gh` calls | Time | Tokens (Claude Code) |
 | --- | --- | --- | --- | --- |
 | First draft, no `gh` cap | 10 | 37 to 70 | 12 to 15 min | about 150k |
-| With the `gh` cap (SQLite question) | 10 | 15 | 10 min | about 130k |
+| With the `gh` cap (SQLite) | 10 | 15 | 10 min | about 130k |
+| Published wording (rate limiting) | 7 | 14 | 11 min | about 155k |
 
-The capped run ended with a pick backed by `code` and `docs` evidence, the condition that would make it wrong, and a CI spike as the next probe. The published version adds wording fixes from that run's notes.
+Each capped run ended with a pick backed by `code` and `docs` evidence, the condition that would make it wrong, and a concrete next probe.
+
+## Checked for correctness
+
+After the runs, 20 load-bearing claims were checked by hand against their sources: release dates, stars, licenses, default values, file and line references, and quotes from vendor docs. All 20 held, including exact line numbers. Questions the skill marked open were open in the sources too.
 
 ## Requirements
 
