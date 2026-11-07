@@ -1,6 +1,6 @@
 ---
 name: prior-art
-description: Lean scan of how open source and industry leaders already solve a problem. Returns a sourced shortlist to choose from.
+description: Scan how open source and industry leaders already solve a problem, within a fixed call budget. Returns a sourced shortlist to choose from.
 disable-model-invocation: true
 ---
 

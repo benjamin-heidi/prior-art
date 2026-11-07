@@ -1,6 +1,6 @@
 interface:
   display_name: "Prior Art"
-  short_description: "Lean, sourced scan of how others already solve a problem"
+  short_description: "Sourced scan of how others already solve a problem"
   default_prompt: "Use $prior-art to find how open source and industry leaders solve <problem>. Constraints: <constraints>."
 policy:
   allow_implicit_invocation: false
